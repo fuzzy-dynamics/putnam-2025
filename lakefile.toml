@@ -5,20 +5,32 @@
 #   2. Run: lake update
 #   3. Run: lake exe cache get  (downloads precompiled Mathlib - crucial!)
 #   4. Run: lake build
+#
+# To verify solutions:
+#   lake build SolutionsLean
+#
+# To check problems compile:
+#   lake build ProblemsLean
 
 name = "putnam2025"
 version = "0.1.0"
-defaultTargets = ["Problems", "Solutions"]
+defaultTargets = ["SolutionsLean"]
 
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
 rev = "master"
 
+# Problem statements (with sorry placeholders)
+# Source files in problems-lean/, accessible as ProblemsLean module
 [[lean_lib]]
-name = "Problems"
+name = "ProblemsLean"
 srcDir = "problems-lean"
+roots = ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4", "B5", "B6"]
 
+# Complete solutions (no sorry)
+# Source files in solutions-lean/, accessible as SolutionsLean module
 [[lean_lib]]
-name = "Solutions"
+name = "SolutionsLean"
 srcDir = "solutions-lean"
+roots = ["A1_2025", "A2_2025", "A3_2025", "A4_2025", "B1_2025", "B2_2025", "B3_2025", "B4_2025"]
