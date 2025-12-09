@@ -1,0 +1,1 @@
+Hey! We're FYDY and we are building an open-source AI co-scientist that treats research as a long-horizon collaboration (not automation) problem. We've been obsessing over test-time compute, memory, and lately autoformalization. Putnam 2025 felt like a good first test. Here's how it went.
