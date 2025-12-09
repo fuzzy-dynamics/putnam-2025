@@ -1,0 +1,24 @@
+# Putnam 2025 - Lean 4 Formalizations
+#
+# Setup:
+#   1. Install elan: curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh
+#   2. Run: lake update
+#   3. Run: lake exe cache get  (downloads precompiled Mathlib - crucial!)
+#   4. Run: lake build
+
+name = "putnam2025"
+version = "0.1.0"
+defaultTargets = ["Problems", "Solutions"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "master"
+
+[[lean_lib]]
+name = "Problems"
+srcDir = "problems-lean"
+
+[[lean_lib]]
+name = "Solutions"
+srcDir = "solutions-lean"

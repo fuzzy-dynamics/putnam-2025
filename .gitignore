@@ -1,3 +1,13 @@
+# Lean 4 / Lake build artifacts
+.lake/
+lake-packages/
+lake-manifest.json
+.elan/
+*.olean
+*.ilean
+*.trace
+*.hash
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
